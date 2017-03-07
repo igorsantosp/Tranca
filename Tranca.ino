@@ -4,7 +4,7 @@ char recebido[MAX];
 int ind=0;
 boolean superUser=false;
 byte entrada1=2;
-byte entrada2=3;
+byte entrada2=6;
 byte enable=4;
 char senha[MAX];
 
@@ -13,7 +13,7 @@ void paraMotor()
  // Serial.println("Parando motor");
   digitalWrite(entrada1, LOW);  
   digitalWrite(entrada2, LOW);  
-  delay(1000);  
+  delay(500);  
 }
 
 void abreTranca()
@@ -21,14 +21,14 @@ void abreTranca()
   //Serial.println("Abrindo tranca");
   digitalWrite(entrada1, LOW);   
   digitalWrite(entrada2, HIGH);  
-  delay(1300); 
+  delay(490); 
 }
 void fechaTranca()
 {
  // Serial.println("Fechando tranca");
   digitalWrite(entrada1, HIGH);  
   digitalWrite(entrada2, LOW);  
-  delay(1300);  
+  delay(490);  
 }
 
 void gravaSenha(char sen[MAX])
